@@ -1,12 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>{% block title %}Hello city{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="container">        
+        <div class="d-flex flex-column center-block">                   
+            {% block body %}{% endblock %}                      
+      
+            <footer class="page-footer">
+                <p >
+                &copy; Copyright {{ 'now'|date("Y") }}
+                &middot; <a href="{{ path('app_about') }}">About us</a>
+                </p>
+            </footer>
+        </div>     
         {% block javascripts %}{% endblock %}
     </body>
 </html>

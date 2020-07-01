@@ -1,0 +1,22 @@
+{#
+Author: fpodev (fpodev@gmx.fr)
+about.html.twig (c) 2020
+Desc: description
+Created:  2020-06-26T14:59:44.872Z
+Modified: !date!
+#}
+
+{% extends "base.html.twig" %}
+
+{% block title %} About us | {{ parent() }} {% endblock %}
+
+{% block body %}
+
+<img src="{{ asset('/img/stick-people-5334880_1920.png') }}" alt="stick people" width=25%>
+  
+    <h1>Built with <span class="pink-text"> &hearts; </span> by fpodev.</h1>
+
+    <p><a href="{{ path('app_home') }}">Revenir à la page d'accueil</a></p>
+
+    
+{% endblock %}
