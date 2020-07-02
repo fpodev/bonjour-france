@@ -12,10 +12,38 @@ Modified: !date!
 
 {% block body %}
 
-    <img src="{{ asset('/img/flag.png') }}" alt="Quebec flag" width="25%">
+    <img src="{{ asset('/img/drapeau-francais.jpg') }}" alt="french flag" width="25%">
   
-    <h1>Hello from Quebec!</h1>
+    <h1>BONJOUR DE FRANCE</h1>
 
-    <p>It's currently {{ 'now'|date('h:i A', 'America/Montreal') }}.</p>
+    <p>Il est {{ 'now'|date('h:i A', 'Europe/Paris') }}.</p>
+
+     <!-- carte meteo -->
+    <div class="row">   
+    <div id="carte_7651fb2b5f75916ac3cab05501b10eb4" class="m-auto">
+        <a href="http://www.mymeteo.info/r/france_00" title="temps aujourd'hui France"><img src="https://services.my-meteo.com/assets_webmaster/cartes/c.gif" alt="temps aujourd'hui France" height="1" width="1" /></a>
+        <script type="text/javascript">
+            (function() {
+            var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+            my.src = "https://services.my-meteo.com/cartes/js?pays=france&periode=24&x=445&y=435&d=0&id=7651fb2b5f75916ac3cab05501b10eb4";
+            var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+            })();
+        </script>
+    </div>
+    <!-- carte meteo -->
+    <div id="carte_b733c99ee44635ba8b7e936bc7da411d">
+        <a href="http://www.mymeteo.info/r/france_00" title="France en savoir plus"><img src="https://services.my-meteo.com/assets_webmaster/cartes/c.gif" alt="France en savoir plus" height="1" width="1" /></a>
+        <script type="text/javascript">
+            (function() {
+            var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+            my.src = "https://services.my-meteo.com/cartes/js?pays=france&periode=48&x=450&y=430&d=0&id=b733c99ee44635ba8b7e936bc7da411d";
+            var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+            })();
+        </script>
+    </div>
+</div>
+    <!-- carte meteo -->
+    
+
    
 {% endblock %}
