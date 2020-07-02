@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -8,17 +8,17 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         {% endblock %}
     </head>
-    <body class="container">        
-        <div class="d-flex flex-column center-block">                   
+    <body class="container d-flex text-center flex-column ">        
+        <div class="bloc m-auto">        
             {% block body %}{% endblock %}                      
-      
-            <footer class="page-footer">
-                <p >
-                &copy; Copyright {{ 'now'|date("Y") }}
-                &middot; <a href="{{ path('app_about') }}">About us</a>
-                </p>
-            </footer>
-        </div>     
+        </div>
+        <footer class="fixed-bottom">
+            <p >
+            &copy; Copyright {{ 'now'|date("Y") }}
+            &middot; <a href="{{ path('app_about') }}">About us</a>
+            </p>
+        </footer>
+           
         {% block javascripts %}{% endblock %}
     </body>
 </html>
